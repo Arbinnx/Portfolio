@@ -61,6 +61,32 @@ html {
   justify-content: space-between;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  flex-shrink: 0;
+  border-radius: 7px;
+  filter: drop-shadow(0 0 8px rgba(70,126,130,0.45));
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover .logo-icon,
+.footer-logo:hover .logo-icon {
+  filter: drop-shadow(0 0 14px rgba(126,200,204,0.7));
+  transform: rotate(-4deg) scale(1.06);
+}
+
 .logo-text {
   font-family: 'Fira Code', monospace;
   font-size: 1.5rem;
@@ -952,9 +978,13 @@ html {
 
 .footer-logo-text {
   font-size: 1.6rem;
-  display: block;
+  display: inline;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.footer-logo {
   margin-bottom: 20px;
-  margin-left: -4px;
 }
 
 .footer-left {
