@@ -303,6 +303,12 @@ html {
   font-size: 1.4rem;
   color: var(--text-muted);
   transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:visited,
+.social-icons a:active {
+  color: var(--text-muted);
 }
 
 .social-icons a:hover {
@@ -908,6 +914,17 @@ html {
   outline: none;
   transition: 0.3s ease;
   font-family: 'Outfit', sans-serif;
+}
+
+.contact-form textarea { resize: none; }
+
+.contact-form input:-webkit-autofill,
+.contact-form input:-webkit-autofill:hover,
+.contact-form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-primary);
+  -webkit-box-shadow: 0 0 0px 1000px #061a1d inset;
+  caret-color: var(--text-primary);
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .contact-form input::placeholder,

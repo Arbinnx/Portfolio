@@ -95,28 +95,45 @@ const successBox = document.getElementById("formSuccess");
  
 form.addEventListener("submit", function (e) {
   e.preventDefault();
- 
+
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
   const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
- 
+
   if (!name || !email || !message) {
     alert("Please fill in all fields.");
     return;
   }
- 
+
   if (!email.match(emailPattern)) {
     alert("Please enter a valid email.");
     return;
   }
- 
-  successBox.classList.add("show");
-  form.reset();
- 
-  setTimeout(() => {
-    successBox.classList.remove("show");
-  }, 4000);
+
+  const submitBtn = form.querySelector(".contact-btn");
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { "Accept": "application/json" }
+  })
+    .then(response => {
+      if (response.ok) {
+        successBox.classList.add("show");
+        form.reset();
+        setTimeout(() => successBox.classList.remove("show"), 4000);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    })
+    .catch(() => alert("Something went wrong. Please try again."))
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send Message";
+    });
 });
 
 const sections = document.querySelectorAll("section");
