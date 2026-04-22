@@ -37,6 +37,7 @@ html {
   right: 120px;
   z-index: 1000;
   background: rgba(6, 26, 29, 0.78);
+  -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
   border-radius: 20px;
   border: 1px solid var(--border-glow);
@@ -588,6 +589,7 @@ html {
   border-radius: 20px;
   padding: 40px 30px;
   border: 1px solid var(--border-soft);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   position: relative;
   overflow: hidden;
@@ -680,6 +682,7 @@ html {
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--border-soft);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   position: relative;
   opacity: 0;
@@ -879,6 +882,7 @@ html {
 
 .contact-right {
   background: rgba(9,71,75,0.45);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   padding: 50px;
   border-radius: 24px;
@@ -1156,6 +1160,7 @@ html {
 
 .navbar.scrolled {
   background: rgba(6,26,29,0.96);
+  -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   transition: 0.4s ease;
 }
@@ -1241,6 +1246,7 @@ html {
     gap: 1.5rem;
     padding: 2rem 0;
     background: rgba(6,26,29,0.97);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border-radius: 0 0 20px 20px;
     opacity: 0;
