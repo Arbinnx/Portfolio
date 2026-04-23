@@ -1151,9 +1151,17 @@ html {
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
+.reveal-left {
+  transform: translateX(-60px);
+}
+
+.reveal-right {
+  transform: translateX(60px);
+}
+
 .reveal.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0, 0);
 }
 
 .footer.reveal { transform: translateY(80px); }
